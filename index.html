@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+     <meta charset="UTF-8">
+     <meta name="description" content="Kunjungi websiteku">
+    <meta name="keywords" content="Firman Hasudungan Simatupang">
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+     <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+     <title>Firman Hasudangan Simatupang</title>
+</head>
+<body>
+     
+<nav class="navbar">
+  <div class="navbar-header">
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+    <h1 class="navbar-brand navbar-right" href="#">Firman Hasudungan Simatupang</h1>
+  </div>
+  <div class="collapse navbar-collapse" id="myNavbar">
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="biodata.html"style="color:white;">Biodata</a></li>
+ <li><a href="about.html" style="color:white;">About Firman</a></li>
+      <li><a href="contact.html" style="color:white;">Contact</a></li>
+      <li><a href="profilku.html" style="color:white;">Profil</a></li>
+    </ul>
+  </div>
+</nav>
+<style>
+   body {
+    background-color: #201d74;
+   }
+   
+   .navbar {
+    display: block;
+    background-color: blue;
+   }
+   .navbar-brand {
+     font-weight: bold;
+     Color: white;
+     position: absolute;
+     right: 50px;
+     margin: 0;
+    
+   }
+   .navbar-toggle {
+  
+  border: none;
+  background: transparent !important;
+}
+
+.navbar-toggle:focus {
+  outline: none !important;
+}
+
+.icon-bar {
+  width: 22px;
+  height: 2px;
+  background-color: white;
+  display: block;
+  transition: all 0.2s;
+}
+
+.navbar-toggle .icon-bar {
+  margin-top: 7px;
+}
+
+.navbar-toggle.collapsed .icon-bar:first-child {
+  transform: rotate(45deg);
+  transform-origin: 10% 10%;
+}
+.navbar-toggle.collapsed .icon-bar:nth-child(2) {
+  opacity: 0;
+}
+
+.navbar-toggle.collapsed .icon-bar:last-child {
+  transform: rotate(-45deg);
+  transform-origin: 10% 90%;
+}
+.collapse,navbar-collapse {
+  background-color: blue;
+  
+}
+.navbar-nav .active a {
+  color: white;
+  border-bottom: 2px solid #fff;
+}
+
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  // Memuat navbar
+  $(".navbar").load("navbar.html .navbar-header", function() {
+    // Menampilkan navbar menu pada saat tombol toggle navbar di klik
+    $(".navbar-toggle").click(function(){
+      $("#myNavbar").toggle();
+    });
+  });
+
+  // Menandai menu yang aktif
+  $(".nav li").click(function(){
+    $(".nav li").removeClass("active");
+    $(this).addClass("active");
+  });
+
+// Memuat halaman biodata.html saat halaman pertama kali dimuat
+  $('#content').load('biodata.html');
+  $('ul.navbar-nav li').removeClass('active');
+  $('ul.navbar-nav li:first').addClass('active');
+
+  // Memuat halaman baru saat menu di klik
+  $('a').click(function(e) {
+    e.preventDefault();
+    var url = $(this).attr('href');
+    $('#content').load(url);
+    $('ul.navbar-nav li').removeClass('active');
+    $(this).parent().addClass('active');
+  });
+
+  // Toggle navbar saat tombol toggle di klik
+  $('.navbar-toggle').click(function(){
+    $(this).toggleClass('collapsed');
+    $('.navbar-collapse').toggleClass('in');
+  });
+});
+ 
+</script>
+<div id="content">
+  <!-- Kontent akan dimuat di sini -->
+</div>
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+     <meta charset="UTF-8">
+     <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+     <title>About Firman</title>
+</head>
+<body>
+     <div class="foto">
+     <img src="firman.jpg" style="border-radius: 50px; width: 100px; height: 100px; display: block; margin: 0 auto;"></div>
+       <div class="topics">
+     <div class="berenang">
+   <h2 style="color: white;">Apa hobiku?</h2>
+   <p class="short-desc"style="color:white; font-weight: bold;">Hobiku adalah berenang, Yuk baca!</p>
+   <p class="full-desc" style="display: none; font-weight: bold; color: white;">Salam, aku Firman Hasudangan Simatupang, Aku adalah seorang pecinta renang yang sangat menikmati berada di dalam air, Aku mulai belajar berenang sejak kecil, dan sejak saat itu, berenang telah menjadi hobi yang sangat aku sukai,
+Berenang bukan hanya sebuah kegiatan yang menyenangkan, tetapi juga memiliki banyak manfaat kesehatan, Berenang dapat membantu meningkatkan kekuatan otot, meningkatkan kesehatan jantung, dan membantu menjaga berat badan yang sehat, Selain itu, berenang juga dapat membantu mengurangi stres dan meningkatkan kesehatan mental.
+
+Aku senang berbagi kecintaan aku terhadap berenang dengan orang lain, dan aku percaya bahwa berenang adalah cara yang baik untuk menjaga kesehatan dan kebahagiaan, Aku berharap bahwa dengan berbagi pengalaman aku, aku dapat menginspirasi orang lain untuk mengejar hobinya dan meraih manfaat kesehatan yang sama seperti yang aku alami.
+<br> <br/>
+   <img class="" src="chibi.png" style="width: 200px; height: 200px;"></p>
+    <button class="toggle-button"><i class="fas fa-chevron-down"></i><br></button>
+ 
+        </div>
+        <br/>
+   <div class="cita-cita">
+    <h2 style="color:white;">Apa cita-citaku?</h2>
+    <p id="kedua" class="short-desc" style="color: white; font-weight: bold;">Cita-citaku menjadi pramugara, Yuk baca!</p>
+  <p class="full-desc"style="color:white; font-weight: bold;">Nama Lengkap aku adalah Firman Hasudungan Simatupang, Aku anak ketiga  dari tiga bersaudara, Aku Hidup di keluarga sederhana, namun keluargaku saling menyayangi satu sama lain, Saat itu aku duduk di bangku kelas 6 SD, Aku dan teman-temanku sering bercerita tentang masa depan kita, Setelah dewasa nanti aku ingin menjadi seorang pramugara.
+Sekarang di sekolah SMA NEGERI LAGUBOTI aku sangat menyukai pelajaran IPS ( Ilmu Pengetahuan Sosial) karena menurut buku yang ku baca dengan memahami pelajaran IPS, dapat membantuku dan mempermudah untuk menjadi seorang pramugara, Selain itu aku juga mengikuti les bahasa Inggris, Karena menjadi pramugara tidak segampang yang kita pikirkan, Menjadi pramugara harus menguasai beberapa ilmu bahasa, salah satunya adalah bahasa Inggris, Bahasa Inggris adalah bahasa internasional jadi aku perlu menguasainya untuk menjadi pramugara. 
+Untuk menguasai bahasa Inggris aku mengambil beberapa pelajaran tambahan di les, Aku berangkat les jam 18:00 wib, tempat lesku berada di Jombang Jember. Sesampainya di sana aku langsung mengambil buku lesku, Di tempat les selain setoran bahasa Inggris Guruku juga biasa mengajak bermain game, Game itu adalah game bahasa Inggris yaitu mengenal barang dengan bahasa Inggris, Dengan melakukan kegiatan game aku jadi bisa tahu banyak kosakata dalam bahasa Inggris, Les berakhir pada jam 19:30 wib dan aku dijemput oleh Ayahku untuk pulang. Aku akan mengejar cita-citaku agar tercapai meskipun dengan pengorbanan yang sangat-sangat berat, Menurut yang aku baca ada beberapa syarat menjadi pramugara yang harus dipenuhi yaitu harus memiliki tinggi badan minimum 158 sampai 172 cm, Syarat itu tak mudah namun aku setiap hari berusaha untuk berolahraga supaya aku menjadi lebih tinggi.
+Live  life  to the fullest, and focus  on the  positive! 
+ <br/><img src="pramugara.png" style="box-shadow: 5.0.5.px white; width: 100px; height: 100px;"> </p><button class="toggle-button"><i class="fas fa-chevron-down"></i><br></button>
+        </div>
+     </div>
+ <style>
+    body {
+     background-color: #201d74;
+    }
+  }  
+
+.topics{
+ display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+   
+   
+}
+.short-desc,h2 {
+   text-align: center;
+}
+.full-desc{
+  display: none;
+   flex-direction: column;
+   justify-content: center;
+   background-color: #201d74;
+   position: relative;
+   text-align: center;
+}
+.toggle-button {
+ font-family: arial;
+ display: flex;
+ justify-content: center;
+ font-weight: bold;
+ border-radius: 50%;
+ background: none;
+ color: white;
+}
+</style>
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script><script>
+  $(document).ready(function() {
+  $('.toggle-button').click(function() {
+    var shortDesc = $(this).siblings('.short-desc');
+    var fullDesc = $(this).siblings('.full-desc');
+    
+    if (shortDesc.is(':visible')) {
+      shortDesc.hide();
+      fullDesc.show();
+      $(this).find('i').removeClass('fa-chevron-down').addClass('fa-chevron-up');
+    } else {
+      shortDesc.show();
+      fullDesc.hide();
+      $(this).find('i').removeClass('fa-chevron-up').addClass('fa-chevron-down');
+      }
+   });
+});
+ 
+</script>
+</body>
+</html>
