@@ -1,0 +1,21 @@
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+[context.production.environment]
+  MY_SECRET_KEY = "secret"
+
+[context.split1]
+  command = "npm run build:split1"
+  publish = "dist/split1"
+
+[context.split2]
+  command = "npm run build:split2"
+  publish = "dist/split2"
+ 
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+ 
